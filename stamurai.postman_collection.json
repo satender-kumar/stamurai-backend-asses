@@ -1,0 +1,493 @@
+{
+	"info": {
+		"_postman_id": "a65b72a6-ad40-461a-aeb6-6dada63c99c7",
+		"name": "stamurai",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"amit@k.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIl9pZCI6IjYwOWExYWE3NzAxMmMzMGFhYzgyNTZlYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYyMDcyNjM5NH0.RRt1i6tBKvBpZJrMFbrMfC8DkF_wwv2HdmmPU1H9QoQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Diksha\",\r\n    \"email\": \"diksha@k.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/create-user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"create-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXRAay5jb20iLCJfaWQiOiI2MDlhMWJiZTcwMTJjMzBhYWM4MjU2ZWIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyMDcyODc3MX0.KINDPJEU0G5vWcaV3pT2dYTcRD07zptoESIxZMOvPcI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Amit's Movies\",\r\n    \"description\": \"Movie1, movie2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task/create-task",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"create-task"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "609a2c6ac06ce153d40e8969",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Reviewer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXRAay5jb20iLCJfaWQiOiI2MDlhMWJiZTcwMTJjMzBhYWM4MjU2ZWIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyMDcyODc3MX0.KINDPJEU0G5vWcaV3pT2dYTcRD07zptoESIxZMOvPcI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reviewerId\":\"609a2c6ac06ce153d40e8969\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/assign-reviewer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"assign-reviewer"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "609a1bbe7012c30aac8256eb",
+							"disabled": true
+						},
+						{
+							"key": "reviewerId",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Reviewer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXRAay5jb20iLCJfaWQiOiI2MDlhMWJiZTcwMTJjMzBhYWM4MjU2ZWIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyMDcyODc3MX0.KINDPJEU0G5vWcaV3pT2dYTcRD07zptoESIxZMOvPcI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reviewerId\":\"609a2c6ac06ce153d40e8969\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/remove-reviewer?=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"remove-reviewer"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "609a1bbe7012c30aac8256eb",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXRAay5jb20iLCJfaWQiOiI2MDlhMWJiZTcwMTJjMzBhYWM4MjU2ZWIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyMDcyODc3MX0.KINDPJEU0G5vWcaV3pT2dYTcRD07zptoESIxZMOvPcI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"newDescription\": \"new Description for movies. instead of movie1 & movie2.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/task/edit-task?taskId=609a5becfc5a098cd8a4652d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"edit-task"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "609a5becfc5a098cd8a4652d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Tasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIl9pZCI6IjYwOWExYWE3NzAxMmMzMGFhYzgyNTZlYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYyMDcyNzA1Nn0.c120r0bvhL5X7JvobXhGHHQSAxFqUved0ZxfjaFv9bA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/task/view-task?taskId=609a5becfc5a098cd8a4652d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"view-task"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "609a5becfc5a098cd8a4652d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show All Users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXRAay5jb20iLCJfaWQiOiI2MDlhMWJiZTcwMTJjMzBhYWM4MjU2ZWIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyMDcyOTE0MH0.dsJHxtYj2MTVCSEb16Nkte-La4deJBIA4MWHCS2Qmu4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/user/show-all-users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"show-all-users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show User Tasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXRAay5jb20iLCJfaWQiOiI2MDlhMWJiZTcwMTJjMzBhYWM4MjU2ZWIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyMDcyOTE0MH0.dsJHxtYj2MTVCSEb16Nkte-La4deJBIA4MWHCS2Qmu4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/task/user-tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"user-tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task view to Admin by User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIl9pZCI6IjYwOWExYWE3NzAxMmMzMGFhYzgyNTZlYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYyMDczMDc5M30.m-ZvlDgi8teXLUc6p0DDZM8ykRuatEi1v3LUm951IbE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/task/all-tasks?creatorId=609a1bbe7012c30aac8256eb",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"all-tasks"
+					],
+					"query": [
+						{
+							"key": "creatorId",
+							"value": "609a1bbe7012c30aac8256eb"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Task view to Reviewer",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhbUBrLmNvbSIsIl9pZCI6IjYwOWEyYzZhYzA2Y2UxNTNkNDBlODk2OSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjIwNzMxNzQ4fQ.gsAYD5GFQFBxm5vTCVVV_y99JkR7b7eFwcaNbLNZQTE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/task/reviewer-tasks?assigneeId=609a2c6ac06ce153d40e8969",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"reviewer-tasks"
+					],
+					"query": [
+						{
+							"key": "assigneeId",
+							"value": "609a2c6ac06ce153d40e8969"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Task Creator Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGFkbWluLmNvbSIsIl9pZCI6IjYwOWExYWE3NzAxMmMzMGFhYzgyNTZlYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYyMDczMzAxOX0.PBldqrRVhcbSrQuilQFu-nVDU4YC7aU9KNaNxMFyY0w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/task/view-user-details?taskId=609a2c97c06ce153d40e896a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"view-user-details"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "609a2c97c06ce153d40e896a"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Approve Task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpa3NoYUBrLmNvbSIsIl9pZCI6IjYwOWE1M2EwZWEyMjVjNzU0Y2ZhZDg2MCIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjIwNzUyNjM5fQ.Y-hIL23LYb1K4Txzbg9LyYomgP1MTjT72ZZ3PoddAIo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/task/approve-task?taskId=609a5becfc5a098cd8a4652d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"approve-task"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "609a5becfc5a098cd8a4652d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark Task Done",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFtaXRAay5jb20iLCJfaWQiOiI2MDlhMWJiZTcwMTJjMzBhYWM4MjU2ZWIiLCJyb2xlIjoidXNlciIsImlhdCI6MTYyMDc1NDMzNn0.R3d0n-q7469oS44iiJdY8ty_t7edypWHdxeyNkF-8qI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/task/mark-done?taskId=609a5becfc5a098cd8a4652d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"task",
+						"mark-done"
+					],
+					"query": [
+						{
+							"key": "taskId",
+							"value": "609a5becfc5a098cd8a4652d"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
